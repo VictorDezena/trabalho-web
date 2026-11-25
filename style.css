@@ -1,0 +1,242 @@
+/* ===== Reset básico e modelo de caixa ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: #1c2033;
+  background: #eef0fa;
+  line-height: 1.5;
+}
+
+/* Container fixo e centralizado */
+.container {
+  width: 940px;
+  margin: 0 auto;
+}
+
+/* ===== Cabeçalho (posicionamento: sticky) ===== */
+header {
+  background: #1b1f3b;
+  padding: 12px 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+header .container { position: relative; }
+
+.logo {
+  width: 45px;
+  vertical-align: middle;
+}
+
+header h1 {
+  display: inline-block;
+  vertical-align: middle;
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+nav {
+  position: absolute;      /* menu fica à direita do cabeçalho */
+  right: 0;
+  top: 8px;
+}
+
+.menu li {
+  display: inline-block;
+  list-style: none;
+  margin-left: 18px;
+}
+
+/* ===== Formatação de links ===== */
+a {
+  color: #1b1f3b;
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+.menu a {
+  color: #ffffff;
+  font-size: 16px;
+}
+.menu a:hover {
+  color: #ff9f1c;
+  text-decoration: none;
+}
+
+/* ===== Banner ===== */
+#banner {
+  background: #6c3fc5;
+  color: #ffffff;
+  text-align: center;
+  padding: 50px 0;
+}
+#banner h2 {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+#banner p { margin-bottom: 20px; font-size: 18px; }
+
+/* ===== Botões ===== */
+.botao {
+  display: inline-block;
+  background: #ff9f1c;
+  color: #1c2033;
+  font-weight: bold;
+  border: 2px solid #d17f00;
+  border-radius: 6px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.botao:hover { background: #ffb84d; text-decoration: none; }
+
+.botao-comprar {
+  width: 100%;
+  margin-top: 15px;
+  background: #1b1f3b;
+  color: #ffffff;
+  border-color: #0d0f24;
+}
+.botao-comprar:hover { background: #6c3fc5; }
+
+/* ===== Títulos de seção ===== */
+section { padding: 30px 0; }
+
+.titulo-secao {
+  font-size: 30px;
+  font-weight: bold;
+  color: brown;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* ===== Produtos (inline-block, 30%) ===== */
+#lista-produtos { text-align: center; }
+
+.produto {
+  display: inline-block;
+  text-align: center;
+  width: 30%;
+  vertical-align: top;
+  background: #ffffff;
+  margin: 0 1.1% 20px;
+  padding: 20px;
+  border: 1px solid #c5c9e6;
+  border-radius: 8px;
+}
+.produto img { width: 100%; border-radius: 6px; }
+.produto h3 { margin: 10px 0 5px; font-size: 20px; }
+.produto .preco {
+  font-size: 22px;
+  font-weight: bold;
+  color: #6c3fc5;
+  margin-bottom: 10px;
+}
+
+/* ===== Carrinho (elementos flutuantes) ===== */
+#carrinho { overflow: hidden; }   /* limpa os floats */
+
+#area-itens {
+  float: left;
+  width: 60%;
+}
+#resumo {
+  float: right;
+  width: 36%;
+  background: #ffffff;
+  border: 2px solid #6c3fc5;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+#itens-carrinho li {
+  list-style: none;
+  background: #ffffff;
+  border-left: 5px solid #ff9f1c;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+}
+#itens-carrinho button {
+  margin-left: 6px;
+  padding: 2px 8px;
+  cursor: pointer;
+}
+
+#resumo h3 { margin-bottom: 10px; }
+.total {
+  font-size: 22px;
+  font-weight: bold;
+  border-top: 1px solid #c5c9e6;
+  padding-top: 8px;
+  margin-top: 8px;
+}
+
+#form-cupom { margin-top: 15px; }
+#msg-cupom { margin-top: 8px; font-style: italic; }
+.ok { color: #1c7a3a; }
+.erro { color: #b3261e; }
+
+/* ===== Tabela ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+}
+th, td {
+  border: 1px solid #c5c9e6;
+  padding: 10px;
+  text-align: center;
+}
+th {
+  background: #1b1f3b;
+  color: #ffffff;
+}
+
+/* ===== Formulários ===== */
+form label {
+  display: block;
+  font-weight: bold;
+  margin: 10px 0 4px;
+}
+input, select, textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #9aa0cc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+#form-contato {
+  width: 60%;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 20px;
+  border: 1px solid #c5c9e6;
+  border-radius: 8px;
+}
+#form-contato .botao { margin-top: 15px; }
+#form-cupom .botao { margin-top: 8px; }
+
+/* ===== Rodapé (float) ===== */
+footer {
+  background: #1b1f3b;
+  color: #ffffff;
+  padding: 30px 0;
+  margin-top: 30px;
+}
+footer .container { overflow: hidden; }
+.col-rodape {
+  float: left;
+  width: 50%;
+}
+.col-rodape li { list-style: none; }
+footer a { color: #ff9f1c; }
+footer h4 { font-size: 18px; margin-bottom: 6px; }

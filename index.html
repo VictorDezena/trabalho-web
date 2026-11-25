@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Zone - Loja de Jogos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- CABEÇALHO -->
+  <header id="topo">
+    <div class="container">
+      <h1>Game Zone</h1>
+      <nav>
+        <ul class="menu">
+          <li><a href="#produtos">Jogos</a></li>
+          <li><a href="#frete">Entrega</a></li>
+          <li><a href="#contato">Contato</a></li>
+          <li><a href="#carrinho">Carrinho (<span id="contador">0</span>)</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- BANNER -->
+  <section id="banner">
+    <div class="container">
+      <h2>Os melhores jogos, pelo menor preço</h2>
+      <p>Use o cupom <strong>GAMER10</strong> e ganhe 10% de desconto na primeira compra.</p>
+      <a href="#produtos" class="botao">Ver jogos</a>
+    </div>
+  </section>
+
+  <main class="container">
+
+    <!-- PRODUTOS (os cards são criados pelo JavaScript) -->
+    <section id="produtos">
+      <h2 class="titulo-secao">Nossos jogos</h2>
+      <div id="lista-produtos"></div>
+    </section>
+
+    <!-- CARRINHO -->
+    <section id="carrinho">
+      <h2 class="titulo-secao">Seu carrinho</h2>
+
+      <div id="area-itens">
+        <ul id="itens-carrinho"></ul>
+      </div>
+
+      <aside id="resumo">
+        <h3>Resumo</h3>
+        <p>Subtotal: <span id="subtotal">R$ 0,00</span></p>
+        <p>Desconto: <span id="desconto">R$ 0,00</span></p>
+        <p class="total">Total: <span id="total">R$ 0,00</span></p>
+
+        <form id="form-cupom">
+          <label for="cupom">Cupom de desconto</label>
+          <input type="text" id="cupom" placeholder="Digite o cupom">
+          <button type="submit" class="botao">Aplicar</button>
+        </form>
+        <p id="msg-cupom"></p>
+
+        <button id="btn-comprar" class="botao botao-comprar">Finalizar compra</button>
+      </aside>
+    </section>
+
+    <!-- TABELA DE FRETE -->
+    <section id="frete">
+      <h2 class="titulo-secao">Plataformas e entrega</h2>
+      <table>
+        <thead>
+          <tr><th>Plataforma</th><th>Tipo</th><th>Entrega</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>PC</td><td>Chave digital</td><td>Imediata por e-mail</td></tr>
+          <tr><td>PlayStation</td><td>Mídia física</td><td>3 a 7 dias</td></tr>
+          <tr><td>Xbox</td><td>Mídia física</td><td>3 a 7 dias</td></tr>
+          <tr><td>Nintendo Switch</td><td>Mídia física</td><td>4 a 8 dias</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- FORMULÁRIO DE CONTATO -->
+    <section id="contato">
+      <h2 class="titulo-secao">Fale com a gente</h2>
+      <form id="form-contato">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" required>
+
+        <label for="email">E-mail</label>
+        <input type="email" id="email" required>
+
+        <label for="assunto">Assunto</label>
+        <select id="assunto">
+          <option>Dúvida sobre jogo</option>
+          <option>Pedido</option>
+          <option>Sugestão</option>
+        </select>
+
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" rows="4"></textarea>
+
+        <button type="submit" class="botao">Enviar</button>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer>
+    <div class="container">
+      <div class="col-rodape">
+        <h4>Game Zone</h4>
+        <p>Projeto acadêmico - Desenvolvimento Web.</p>
+      </div>
+      <div class="col-rodape">
+        <h4>Links</h4>
+        <ul>
+          <li><a href="#topo">Voltar ao topo</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
